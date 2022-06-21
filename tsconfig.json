@@ -1,27 +1,31 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "es6",
+    "outDir": "dist",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "./src/",
+    // "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
+    // "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    // "strict": true /* Enable all strict type-checking options. */,
+    // "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "strictPropertyInitialization": false,
+    "baseUrl": "src",
     "paths": {
-      "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"],
-      "@assets/*":["../assets/*"]
+      "@entities/*": ["entities/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": ["src", "src/*", "src/**/*"],
+  "exclude": ["./node_modules"]
 }
