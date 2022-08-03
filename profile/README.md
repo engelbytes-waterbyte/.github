@@ -1,6 +1,11 @@
-## Willkommen bei Waterbyte! 👋
+## Welcome @ Waterbyte! 👋
 
 <!--
+
+### Who?
+
+We are a collaboration of a hand full of people striving for innovative ideas and projects.
+
 
 **Here are some ideas to get you started:**
 
